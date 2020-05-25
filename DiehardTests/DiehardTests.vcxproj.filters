@@ -24,5 +24,8 @@
     <ClCompile Include="OverlappingSumsTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BirthdaySpacingsTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BirthdaySpacingsTest.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="OverlappingSumsTest.cpp" />
     <ClCompile Include="SqueezeTest.cpp" />

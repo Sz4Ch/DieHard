@@ -43,7 +43,6 @@ void OverlappingSumsTest()
 	}
 	file.close();
 
-
 	std::vector<float> floated_numbers_vec(numbers_vec.size());
 	std::copy(numbers_vec.begin(), numbers_vec.end(), floated_numbers_vec.begin());
 
@@ -53,20 +52,28 @@ void OverlappingSumsTest()
 
 	std::vector<float> sums_vec;
 	
-	long start = 0;
-	long end = 100;
-	auto range = Range<start, end>();
-	auto Sum = [&](const float n) { sums_vec.end() += n; };
+	int offset = 100; //range width
+
+	std::vector<float>::iterator start = floated_numbers_vec.begin();
+	std::vector<float>::iterator end = start + offset;
+
+	auto Sum = [&](const float n) { *(sums_vec.end() - 1) += n; };
 	
-	while (true)
+	while (end != floated_numbers_vec.end())
 	{
-		sums_vec.push_back(0.0f);
-		std::for_each(range.begin(), range.end(), Sum);
-		
+		sums_vec.push_back(0.0f); //new sum
+		std::for_each(start, end, Sum); //sum in range start - end
 
-
+		start++;
+		end = start + offset;
 	}
 
-	return;
+	sums_vec.push_back(0.0f); //last sum
+	std::for_each(start, end, Sum);
 
+	std::fstream result("OverlappingSums.txt", std::ios::out);
+	
+	std::for_each(sums_vec.begin(), sums_vec.end(), [&](const float n) { result << n << "\n"; });
+
+	return;
 }

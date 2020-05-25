@@ -48,7 +48,7 @@ void SqueezeTest()
 
 	}
 
-	std::cout << "j > 48: " << over << "times.\n" << "j < 6:" << below << "times.";
+	std::cout << "j > 48: " << over << " times.\n" << "j < 6:" << below << " times.";
 
 
 	return;

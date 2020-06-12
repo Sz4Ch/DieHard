@@ -40,6 +40,10 @@ void BirthdaySpacingsTest()
 
 	std::for_each(spacings_vec.begin(), spacings_vec.end(), count_spacings);
 
+	std::fstream result("Birthdays.txt", std::ios::out);
+
+	std::for_each(spacings_vec.begin(), spacings_vec.end(), [&](const float n) { result << n << "\n"; });
+
 	return;
 
 }

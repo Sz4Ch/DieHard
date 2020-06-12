@@ -139,9 +139,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BirthdaySpacingsTest.cpp" />
+    <ClCompile Include="BirthdaySpacingTestNextPart.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="OverlappingSumsTest.cpp" />
     <ClCompile Include="SqueezeTest.cpp" />
+    <ClCompile Include="SqueezeTestNextPart.cpp" />
+    <ClCompile Include="SquezeeTestv2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
